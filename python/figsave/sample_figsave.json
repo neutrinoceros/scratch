@@ -1,0 +1,8 @@
+{
+    "savedir": "$PROJECT_DIR/img",
+    "specs":
+    {
+	"pdf": {"format": "pdf"},
+	"png": {"format": "png"},
+    }
+}
