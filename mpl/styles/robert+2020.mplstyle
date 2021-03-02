@@ -1,0 +1,122 @@
+# this is based on
+# default seaborn aesthetic
+# (deep palette + notebook context)
+# style is a patched combination fo "darkgrid" then "ticks"
+
+# here's the script that this file is automating
+#
+# plt.style.use("seaborn")
+# sns.set_style("ticks")
+# sns.set_palette("deep")
+# mpl.rcParams['xtick.direction'] = 'in'
+# mpl.rcParams['ytick.direction'] = 'in'
+# mpl.rcParams['xtick.top'] = True
+# mpl.rcParams['ytick.right'] = True
+# mpl.rcParams['xtick.minor.visible'] = True
+# mpl.rcParams['ytick.minor.visible'] = True
+# mpl.rcParams["image.cmap"] = "magma"
+# mpl.rcParams["axes.axisbelow"] = False
+# mpl.rcParams["lines.markeredgewidth"] = 1.0
+
+
+
+axes.axisbelow: False
+axes.edgecolor: 0.15
+axes.facecolor: white
+axes.labelcolor: .15
+axes.labelsize: 12
+axes.linewidth: 1.25
+# this is the "deep" palette from seaborn
+#axes.prop_cycle: cycler('color', ['4C72B0', '55A868', 'C44E52', '8172B2', 'CCB974', '64B5CD'])
+
+# color hexes taken from
+# https://experience.sap.com/fiori-design-web/values-and-names/
+# reshuffled to a custom order
+axes.prop_cycle: cycler('color', ['BF399E', '525DF4', '13A4B4', '945ECF', 'ED4A7B', '19A979', 'E8743B', '5899DA', '2F6497', 'EE6868', '6C8893'])
+axes.titlesize: 12
+
+axes.spines.left: True
+axes.spines.bottom: True
+axes.spines.right: True
+axes.spines.top: True
+
+figure.facecolor: white
+figure.figsize: 8.0, 5.5
+figure.subplot.bottom: 0.125
+
+font.family: sans-serif
+font.sans-serif: Arial, Liberation Sans, DejaVu Sans, Bitstream Vera Sans, sans-serif
+font.size: 12.0
+
+grid.color: 0.8
+grid.linestyle: -
+grid.linewidth: 1
+
+image.cmap: magma
+
+legend.fontsize: 11
+legend.frameon: False
+legend.numpoints: 1
+legend.scatterpoints: 1
+legend.title_fontsize: 12.0
+
+lines.linewidth: 1.75
+#lines.markersize: 6.0
+
+# the following line "fixes" a feature I really dislike in the seaborn stylesheet,
+# where markers in line plots are set with edge-width =1, so that some 
+# markers disappear _completely_ (like "x" or "+")
+# note that it's likely an overkill to explicitly set it here as this is mearnt to be used
+# without the seaborn style sheet altogether
+#lines.markeredgewidth: 1
+lines.markersize: 7
+lines.solid_capstyle: round
+
+patch.edgecolor: "w"
+patch.facecolor: 4C72B0
+patch.force_edgecolor: True
+patch.linewidth: 1.0
+
+text.color: .15
+
+# ticks
+xaxis.labellocation: center
+xtick.alignment: center
+xtick.bottom: True
+xtick.color: .15
+xtick.direction: in
+xtick.labelbottom: True
+xtick.labelsize: 11.0
+xtick.labeltop: False
+xtick.major.bottom: True
+xtick.major.pad: 7.0
+xtick.major.size: 6.0
+xtick.major.top: True
+xtick.major.width: 1.25
+xtick.minor.bottom: True
+xtick.minor.pad: 3.4
+xtick.minor.size: 4.0
+xtick.minor.top: True
+xtick.minor.visible: True
+xtick.minor.width: 1.0
+xtick.top: True
+yaxis.labellocation: center
+ytick.alignment: center_baseline
+ytick.color: .15
+ytick.direction: in
+ytick.labelleft: True
+ytick.labelright: False
+ytick.labelsize: 11.0
+ytick.left: True
+ytick.major.left: True
+ytick.major.pad: 7.0
+ytick.major.right: True
+ytick.major.size: 6.0
+ytick.major.width: 1.25
+ytick.minor.left: True
+ytick.minor.pad: 3.4
+ytick.minor.right: True
+ytick.minor.size: 4.0
+ytick.minor.visible: True
+ytick.minor.width: 1.0
+ytick.right: True
