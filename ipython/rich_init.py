@@ -3,7 +3,8 @@
 def rich_init():
     """
     Doing this in a function keeps pollution into the global
-    namespace at a minimal level. 
+    namespace at a minimal level.
+    Credits to Waylon Walker for this remark. 
     """
     from rich import pretty, traceback
     pretty.install()
