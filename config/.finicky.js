@@ -14,6 +14,10 @@ module.exports = {
     {
       match: /^https:\/\/arxiv\.org\/.*$/,
       browser: "Brave Browser"
+    },
+    {
+      match: /^https:\/\/iopscience.iop.org\/*$/,
+      browser: "Brave Browser"
     }
   ]
 }
