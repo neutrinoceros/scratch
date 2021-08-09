@@ -1,5 +1,4 @@
 # install:
 # copy this file to ~/.ipython/profile_default/startup/
- 
-from IPython.display import set_matplotlib_formats
-set_matplotlib_formats('retina')
+from matplotlib_inline import backend_inline
+backend_inline.set_matplotlib_formats("retina")
