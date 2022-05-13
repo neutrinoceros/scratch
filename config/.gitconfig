@@ -1,0 +1,15 @@
+# install: copy the comptent to ~/.gitconfig
+# /!\ it is not recommended to copy the file directly as it may override any existing configuration
+
+# this configuration is directly taken from https://twitter.com/nedbat/status/1525082030186405890
+
+[rebase]
+autostash  = true  # stash/unstash work in progress
+autosquash = true  # auto-squash commits perfommed with '--fixup'
+
+[alias]
+# rebase without opening the editor
+squash = "!f() { \
+    : git show ; \
+    git -c sequence.editor=: rebase -i ${1:-@~10}; \
+}; f"
