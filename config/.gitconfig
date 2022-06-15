@@ -1,7 +1,10 @@
 # install: copy the comptent to ~/.gitconfig
 # /!\ it is not recommended to copy the file directly as it may override any existing configuration
 
-# this configuration is directly taken from https://twitter.com/nedbat/status/1525082030186405890
+
+# sources
+# squash: https://twitter.com/nedbat/status/1525082030186405890
+# gone: https://www.erikschierboom.com/2020/02/17/cleaning-up-local-git-branches-deleted-on-a-remote/
 
 [rebase]
 autostash  = true  # stash/unstash work in progress
@@ -13,3 +16,4 @@ squash = "!f() { \
     : git show ; \
     git -c sequence.editor=: rebase -i ${1:-@~10}; \
 }; f"
+gone = ! "git fetch -p && git for-each-ref --format '%(refname:short) %(upstream:track)' | awk '$2 == \"[gone]\" {print $1}' | xargs -r git branch -D"
