@@ -2,10 +2,19 @@
 
 set -euxo pipefail
 
-python3 -m pip install --upgrade twine wheel
+### 0) clean dir
 rm -fr dist build
-python3 setup.py sdist bdist_wheel
 
+### 1) install tools
+python -m pip install --upgrade twine wheel
+
+### 2) build wheel
+# old way
+#python setup.py sdist bdist_wheel
+# modern alternative
+python -m build
+
+### 3) deploy
 # for a test publication
 #twine upload --repository-url https://test.pypi.org/legacy/ dist/*
 
