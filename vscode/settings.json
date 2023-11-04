@@ -1,0 +1,36 @@
+{
+    "python.languageServer": "Pylance",
+    "jupyter.askForKernelRestart": false,
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter-notebook"
+    },
+    "C_Cpp.dimInactiveRegions": false,
+    "latex-workshop.synctex.synctexjs.enabled": true,
+    "latex-workshop.synctex.afterBuild.enabled": true,
+    "latex-workshop.view.pdf.viewer": "tab",
+    "emmet.syntaxProfiles": {
+    },
+    "editor.minimap.enabled": false,
+    "terminal.external.osxExec": "iTerm.app",
+    "terminal.explorerKind": "external",
+    "terminal.integrated.automationShell.osx": "zsh",
+    "terminal.integrated.fontFamily": "MesloLGS NF",
+    "terminal.integrated.allowChords": false,
+    "workbench.colorTheme": "Dracula Soft",
+    "cmake.configureOnOpen": false,
+    "codetour.showMarkers": true,
+    "files.associations": {
+        "*.F90": "FortranFreeForm"
+    },
+    "json.schemas": [
+    
+    ],
+    "python.analysis.autoImportCompletions": false,
+    "git.mergeEditor": false,
+    "[python]": {
+        "editor.formatOnType": true
+    },
+    "editor.rulers": [
+        88,
+    ]
+}
