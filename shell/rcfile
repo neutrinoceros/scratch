@@ -1,6 +1,5 @@
 export GIT_EDITOR='emacs -nw'
 
-alias chromium='chromium-browser'
 alias ctree='tree -C'
 alias ssh='ssh -X'
 alias lll='ll -tr'
@@ -10,6 +9,8 @@ mkcd () {
     cd $1
 }
 
-pyver () {
-   /usr/bin/env python3 -c "import $1; print($1.__version__)"
-}
+# homebrew (I'd rather run these important commands manually)
+# `brew update` + `brew_upgrade`
+export HOMEBREW_NO_AUTO_UPDATE=1
+# `brew cleanup`
+export HOMEBREW_NO_INSTALL_CLEANUP=1
