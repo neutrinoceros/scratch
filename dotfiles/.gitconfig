@@ -16,4 +16,23 @@ squash = "!f() { \
     : git show ; \
     git -c sequence.editor=: rebase -i ${1:-@~10}; \
 }; f"
+
 gone = ! "git fetch -p && git for-each-ref --format '%(refname:short) %(upstream:track)' | awk '$2 == \"[gone]\" {print $1}' | xargs -r git branch -D"
+
+# from Adam Johnson's book
+switch-recent = !git branch --sort=-committerdate --format='%(refname:short)' | fzf --preview='git log --date=relative --color main..{}' | xargs git switch
+
+[user]
+name = Clément Robert
+email = cr52@protonmail.com
+
+[init]
+defaultBranch = main
+[merge]
+	conflictStyle = zdiff3
+[diff]
+	algorithm = histogram
+[rerere]
+	enabled = true
+[branch]
+	sort = -committerdate
