@@ -29,6 +29,19 @@ primary = "!f() { \
     sed -n -E -e '/remotes.origin.ma(in|ster)$/s@remotes/origin/@@p'; \
 }; f"
 
+# Switch to main or master, whichever exists, and update it.
+ma = "!f() { \
+	git checkout $(git primary) && \
+	git pull; \
+}; f"
+
+# Pull the upstream main/master branch and update our fork.
+maup = "!f() { \
+	git ma && \
+	git pull upstream $(git primary) --ff-only && \
+	git push; \
+}; f"
+
 [user]
 name = Clément Robert
 email = cr52@protonmail.com
