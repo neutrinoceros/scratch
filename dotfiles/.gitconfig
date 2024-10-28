@@ -1,17 +1,32 @@
-# install: copy the comptent to ~/.gitconfig
-# /!\ it is not recommended to copy the file directly as it may override any existing configuration
+[user]
+name = Clément Robert
+email = cr52@protonmail.com
 
+[init]
+defaultBranch = main
 
-# sources
-# squash: https://twitter.com/nedbat/status/1525082030186405890
-# gone: https://www.erikschierboom.com/2020/02/17/cleaning-up-local-git-branches-deleted-on-a-remote/
-# primary: https://nedbatchelder.com/blog/202410/git_aliases_switch_to_mainster_etc.html#h_returning_home
+[merge]
+conflictStyle = zdiff3
+
+[diff]
+algorithm = histogram
+
+[rerere]
+enabled = true
+
+[branch]
+sort = -committerdate
 
 [rebase]
 autostash  = true  # stash/unstash work in progress
 autosquash = true  # auto-squash commits perfommed with '--fixup'
 
 [alias]
+# sources
+# squash: https://twitter.com/nedbat/status/1525082030186405890
+# gone: https://www.erikschierboom.com/2020/02/17/cleaning-up-local-git-branches-deleted-on-a-remote/
+# primary, ma, maup: https://nedbatchelder.com/blog/202410/git_aliases_switch_to_mainster_etc.html#h_returning_home
+
 # rebase without opening the editor
 squash = "!f() { \
     : git show ; \
@@ -41,18 +56,3 @@ maup = "!f() { \
 	git pull upstream $(git primary) --ff-only && \
 	git push; \
 }; f"
-
-[user]
-name = Clément Robert
-email = cr52@protonmail.com
-
-[init]
-defaultBranch = main
-[merge]
-	conflictStyle = zdiff3
-[diff]
-	algorithm = histogram
-[rerere]
-	enabled = true
-[branch]
-	sort = -committerdate
