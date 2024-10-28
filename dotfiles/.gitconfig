@@ -5,6 +5,7 @@
 # sources
 # squash: https://twitter.com/nedbat/status/1525082030186405890
 # gone: https://www.erikschierboom.com/2020/02/17/cleaning-up-local-git-branches-deleted-on-a-remote/
+# primary: https://nedbatchelder.com/blog/202410/git_aliases_switch_to_mainster_etc.html#h_returning_home
 
 [rebase]
 autostash  = true  # stash/unstash work in progress
@@ -21,6 +22,12 @@ gone = ! "git fetch -p && git for-each-ref --format '%(refname:short) %(upstream
 
 # from Adam Johnson's book
 switch-recent = !git branch --sort=-committerdate --format='%(refname:short)' | fzf --preview='git log --date=relative --color main..{}' | xargs git switch
+
+# Find the name of the primary branch, either "main" or "master".
+primary = "!f() { \
+    git branch -a | \
+    sed -n -E -e '/remotes.origin.ma(in|ster)$/s@remotes/origin/@@p'; \
+}; f"
 
 [user]
 name = Clément Robert
