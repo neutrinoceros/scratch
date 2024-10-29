@@ -1,4 +1,7 @@
-#!/usr/bin/env python
+# /// script
+# requires-python = ">=3.9"
+# dependencies = []
+# ///
 """Remove common temporary files from cwd recursively"""
 import argparse
 import os

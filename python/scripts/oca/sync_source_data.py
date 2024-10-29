@@ -1,4 +1,7 @@
-#!/usr/bin/env python
+# /// script
+# requires-python = ">=3.9"
+# dependencies = []
+# ///
 """Update data directory from origin with rsync.
 
 This requires that at least "runs_data.json" file was already fetched from source.
@@ -10,7 +13,6 @@ The remote server needs to be used with ssh.
 import os
 import json
 from pathlib import Path
-from shutil import copyfile
 import tempfile
 import argparse
 

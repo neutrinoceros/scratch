@@ -1,9 +1,10 @@
-#!/usr/bin/env python
+# /// script
+# requires-python = ">=3.9"
+# dependencies = []
+# ///
 """Remove trailing whitespaces in files matching with chosen suffix"""
-import os
 from pathlib import Path
 from argparse import ArgumentParser
-from typing import Optional
 
 
 def curate_one_file(filepath: Path, dry_run: bool = False):

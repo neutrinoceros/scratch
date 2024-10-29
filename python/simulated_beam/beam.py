@@ -1,3 +1,10 @@
+# /// script
+# requires-python = ">=3.9"
+# dependencies = [
+#     "matplotlib>=3.3",
+#     "scipy>=1.11",
+# ]
+# ///
 """A simple gaussian isotropic beam class"""
 import numpy as np
 from scipy.signal import convolve
@@ -28,7 +35,7 @@ class SimpleBeam:
 if __name__ == "__main__":
     """Minimal demo"""
     import matplotlib.pyplot as plt
-    from matplotlib.patches import Circle, Ellipse
+    from matplotlib.patches import Circle
 
     fig, axes = plt.subplots(ncols=3, nrows=3, figsize=(14, 14), sharex=True, sharey=True)
 

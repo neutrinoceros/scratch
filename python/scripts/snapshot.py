@@ -1,4 +1,9 @@
-#!/usr/bin/env python
+# /// script
+# requires-python = ">=3.9"
+# dependencies = [
+#     "yt>=4.0.0",
+# ]
+# ///
 """Produce the latest density snapshot of a 2D AMRVAC sim the output png is written to cwd,
 but the simulation data can be fetch in a -d directory, absolute or relative to cwd.
 """

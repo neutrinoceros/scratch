@@ -1,4 +1,9 @@
-#!/usr/bin/env python
+# /// script
+# requires-python = ">=3.9"
+# dependencies = [
+#     "yt>=4.0.0",
+# ]
+# ///
 """Merge parfiles using AMRVAC's logic (based on yt.frontend api)
 
 usage
