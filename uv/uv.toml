@@ -1,5 +1,8 @@
 python-preference = 'managed'
 
 # https://github.com/astral-sh/uv/issues/8587
-index = ["https://pypi.anaconda.org/scientific-python-nightly-wheels/simple/"]
 index-strategy = "unsafe-best-match"
+
+[[index]]
+url = "https://pypi.anaconda.org/scientific-python-nightly-wheels/simple/"
+default = false
