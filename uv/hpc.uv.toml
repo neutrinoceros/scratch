@@ -9,7 +9,7 @@
 
 # disable python downloads
 python-downloads = "never"
-python-preference = 'only-system'
+python-preference = "only-system"
 
 # disable caching globally
 no-cache = true
