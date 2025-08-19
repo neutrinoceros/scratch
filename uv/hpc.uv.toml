@@ -3,7 +3,9 @@
 # - home space is limited
 # - we should prefer software already available on the machine
 #
-# for more, see https://docs.astral.sh/uv/reference/settings/
+# for more, see 
+# https://docs.astral.sh/uv/reference/settings/
+# https://docs.astral.sh/uv/concepts/configuration-files/
 
 # disable python downloads
 python-downloads = "never"
