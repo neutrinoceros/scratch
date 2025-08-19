@@ -1,0 +1,17 @@
+# sane defaults for setting up uv for use in a HPC cluster
+# where it is assumed that home space is precious and limited: disable caching
+# - we should prefer software already available on the machine
+
+# disable python downloads
+python-downloads = "never"
+python-preference = 'only-system'
+
+# disable caching globally
+no-cache = true
+
+[tool.uv.pip]
+# compile python byte code at install time (instead of on first import)
+compile-bytecode = true
+
+# when solving an environment, prioritize cross-platform portability
+universal = true
