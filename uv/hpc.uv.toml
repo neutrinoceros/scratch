@@ -14,7 +14,7 @@ python-preference = "only-system"
 # disable caching globally
 no-cache = true
 
-[tool.uv.pip]
+[pip]
 # compile python byte code at install time (instead of on first import)
 compile-bytecode = true
 
