@@ -1,36 +1,31 @@
 {
-    "python.languageServer": "Pylance",
+    "workbench.colorTheme": "Dracula Colorful",
+    "editor.minimap.enabled": false,
+    "editor.fontFamily": "Fira Code",
+    "editor.fontLigatures": true,
+    "terminal.intergrated.fontFamily": "Fira Code",
+    "terminal.integrated.fontLigatures,enabled": true,
+    "merge-conflict.autoNavigateNextConflict.enabled": true,
+    "merge-conflict.diffViewPosition": "Beside",
+    "git.mergeEditor": false,
+
+    "editor.rulers": [80, 88],
+
+    "python.languageServer": "None",
+
     "jupyter.askForKernelRestart": false,
     "workbench.editorAssociations": {
         "*.ipynb": "jupyter-notebook"
     },
     "C_Cpp.dimInactiveRegions": false,
-    "latex-workshop.synctex.synctexjs.enabled": true,
-    "latex-workshop.synctex.afterBuild.enabled": true,
-    "latex-workshop.view.pdf.viewer": "tab",
-    "emmet.syntaxProfiles": {
+    "cmake.configureOnOpen": false,
+    "files.associations": {
+        "*.F90": "FortranFreeForm"
     },
-    "editor.minimap.enabled": false,
+
     "terminal.external.osxExec": "iTerm.app",
     "terminal.explorerKind": "external",
     "terminal.integrated.automationShell.osx": "zsh",
     "terminal.integrated.fontFamily": "MesloLGS NF",
     "terminal.integrated.allowChords": false,
-    "workbench.colorTheme": "Dracula Soft",
-    "cmake.configureOnOpen": false,
-    "codetour.showMarkers": true,
-    "files.associations": {
-        "*.F90": "FortranFreeForm"
-    },
-    "json.schemas": [
-    
-    ],
-    "python.analysis.autoImportCompletions": false,
-    "git.mergeEditor": false,
-    "[python]": {
-        "editor.formatOnType": true
-    },
-    "editor.rulers": [
-        88,
-    ]
 }
